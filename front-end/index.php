@@ -10,7 +10,7 @@ Licence URI: http://www.os-templates.com/template-terms
 -->
 <html lang="">
 <head>
-<title>Basend</title>
+<title>Masjid Al-Barkah</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
@@ -146,7 +146,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
     <div class="sectiontitle">
       <h6 class="heading">PELAYANAN</h6>
-      <p>Masjid Istiqlal selain sebagai pusat ibadah, juga memberikan pelayanan lain yang dapat dinikmati oleh masyarakat
+      <p>Masjid Al-Barkah selain sebagai pusat ibadah, juga memberikan pelayanan lain yang dapat dinikmati oleh masyarakat
 guna meningkatkan kualitas penghambaan kepada Allah Subhanahu Wa Ta’ala.</p>
     </div>
     <ul class="nospace group services">
@@ -164,56 +164,6 @@ guna meningkatkan kualitas penghambaan kepada Allah Subhanahu Wa Ta’ala.</p>
       </li>
     </ul>
 	
-	<table border="1" class="table">
-					<thead>
-						<tr>
-							<th>No</th>
-							<th>Nama</th>
-							<th>Alamat</th>
-							<th>Jenis Kelamin</th>
-							<th>Agama</th>
-							<th>Sekolah Asal</th>
-							
-							<th>Gambar</th>
-							<th>Nama Gambar</th>
-							<th>Ukuran Gambar</th>
-							<th>Tipe Gambar</th>
-							<th>Tindakan</th>
-						</tr>
-					</thead>
-					<tbody>
-						
-						<?php
-						$sql = "SELECT * FROM calon_siswa";
-						$query = mysqli_query($db, $sql);
-						
-						while($siswa = mysqli_fetch_array($query)){
-							echo "<tr>";
-							
-							echo "<td>".$siswa['id']."</td>";
-							echo "<td>".$siswa['nama']."</td>";
-							echo "<td>".$siswa['alamat']."</td>";
-							echo "<td>".$siswa['jenis_kelamin']."</td>";
-							echo "<td>".$siswa['agama']."</td>";
-							echo "<td>".$siswa['sekolah_asal']."</td>";
-							
-							echo "<td><img src='../back-end/images/".$siswa['nama_gambar']."' width='100' height='100'></td>";
-							echo "<td>".$siswa['nama']."</td>";
-							echo "<td>".$siswa['ukuran']."</td>";
-							echo "<td>".$siswa['tipe']."</td>";
-							
-							echo "<td>";
-							echo "<a href='form-edit.php?id=".$siswa['id']."'>Edit</a> | ";
-							echo "<a href='hapus.php?id=".$siswa['id']."'>Hapus</a>";
-							echo "</td>";
-							
-							echo "</tr>";
-						}		
-						?>
-						
-					</tbody>
-					</table>
-	
 	
     <!-- ################################################################################################ -->
     <div class="clear"></div>
@@ -227,38 +177,27 @@ guna meningkatkan kualitas penghambaan kepada Allah Subhanahu Wa Ta’ala.</p>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row4 bgded overlay" style="background-image:url('images/demo/backgrounds/02.png');">
+<div class="wrapper overlay coloured">
   <footer id="footer" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <div class="one_third first">
-      <h6 class="heading">Basend</h6>
-      <p>Nullam quis ligula elementum lectus varius aliquet vivamus odio donec metus libero semper quis suscipit ut aliquam a metus integer.</p>
-      <p class="btmspace-50">Pretium curabitur magna odio laoreet eu accumsan vitae gravida quis odio.</p>
-      <nav>
-        <ul class="nospace">
-          <li><a href="index.html"><i class="fa fa-lg fa-home"></i></a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Terms</a></li>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Cookies</a></li>
-          <li><a href="#">Disclaimer</a></li>
-          <li><a href="#">Online Shop</a></li>
-          <li><a href="#">Sitemap</a></li>
-        </ul>
-      </nav>
+      <h6 class="heading">Lokasi</h6>
+      <iframe width="300px" height="300px" src="https://www.google.com/maps/embed?pb=!4v1554957295150!6m8!1m7!1sf5AbmaMlbsWRHsRWgHI_vg!2m2!1d-6.241095337362261!2d107.0001906867666!3f295.62!4f0!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
     <div class="one_third">
-      <h6 class="heading">Aliquam non fermentum</h6>
+
+    </div>
+    <div class="one_third">
+	      <h6 class="heading">Kontak Kami</h6>
       <ul class="nospace btmspace-30 linklist contact">
         <li><i class="fa fa-map-marker"></i>
           <address>
-          Street Name &amp; Number, Town, Postcode/Zip
+          Jl. Veteran No.46, Marga Jaya, Bekasi Sel., Kota Bks, Jawa Barat 17141
           </address>
         </li>
         <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
         <li><i class="fa fa-fax"></i> +00 (123) 456 7890</li>
-        <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+        <li><i class="fa fa-envelope-o"></i> albarkah@gmail.com</li>
       </ul>
       <ul class="faico clear">
         <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
@@ -269,14 +208,6 @@ guna meningkatkan kualitas penghambaan kepada Allah Subhanahu Wa Ta’ala.</p>
         <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
       </ul>
     </div>
-    <div class="one_third">
-      <h6 class="heading">Sapien lobortis nec</h6>
-      <article><a href="#"><img class="btmspace-15" src="images/demo/320x140.png" alt=""></a>
-        <h6 class="nospace font-x1"><a href="#">Velit pellentesque</a></h6>
-        <time class="font-xs block btmspace-10" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2045</time>
-        <p class="nospace">Eget nisl mauris placerat mauris a semper posuere sem arcu cursus felis non cursus enim odio in maecenas ut justo [&hellip;]</p>
-      </article>
-    </div>
     <!-- ################################################################################################ -->
   </footer>
 </div>
@@ -286,11 +217,27 @@ guna meningkatkan kualitas penghambaan kepada Allah Subhanahu Wa Ta’ala.</p>
 <div class="wrapper row5">
   <div id="copyright" class="hoc clear"> 
     <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">Domain Name</a></p>
-    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <p class="fl_left">
+			<span class="copyright">
+                <script>
+                  document.write(new Date().getFullYear())
+                </script>, made with <i class="fa fa-heart heart"></i> by Al-Barkah Developer Team 
+            </span>
+	</p>
+    <p class="fl_right">
+            <div class="credits ml-auto">
+			<a target="_blank"> | Powered By OS Templates | </a>
+              
+			  	<a href="https://www.instagram.com/haydar_ardabell/" target="_blank">Ahmad Haydar Ardabelli | </a>
+				<a href="https://www.instagram.com/amalazza/" target="_blank">Nurul Amala Azza |  </a>
+            </div>	
+	</p>
     <!-- ################################################################################################ -->
   </div>
 </div>
+
+
+
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
