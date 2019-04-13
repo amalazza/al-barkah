@@ -70,7 +70,7 @@
               <p>Berita Terkini</p></a>
           </li>	
 		  <li>
-			<a href="">
+			<a href="list-kajian.php">
               <i class="nc-icon nc-istanbul"></i>
               <p>Kajian</p></a>
  		  <li>

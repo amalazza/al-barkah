@@ -1,26 +1,4 @@
-<?php 
-
-include("config.php");
-
-if( !isset($_GET['id']) ){
-	// kalau tidak ada id di query string
-	header('Location: list-siswa.php');
-}
-
-//ambil id dari query string
-$id = $_GET['id'];
-
-// buat query untuk ambil data dari database
-$sql = "SELECT * FROM berita WHERE id=$id";
-$query = mysqli_query($db, $sql);
-$data = mysqli_fetch_assoc($query);
-
-// jika data yang di-edit tidak ditemukan
-if( mysqli_num_rows($query) < 1 ){
-	die("data tidak ditemukan...");
-}
-
-?>
+<?php include("config.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,17 +21,7 @@ if( mysqli_num_rows($query) < 1 ){
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
   
-    <style type="text/css">
-		#css-serial {
-					counter-reset: serial-number;  /* Atur penomoran ke 0 */
-					}
-		#css-serial td:first-child:before {
-					counter-increment: serial-number;  /* Kenaikan penomoran */
-					content: counter(serial-number);  /* Tampilan counter */
-					}
-  </style>
-  
-   <script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
+  <script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
   
 </head>
 
@@ -78,17 +46,17 @@ if( mysqli_num_rows($query) < 1 ){
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-		  <li class="active">
-			<a href="list-berita.php">
+      <li>
+      <a href="list-berita.php">
               <i class="nc-icon nc-bank"></i>
-              <p>Berita Terkini</p></a>
+              <p>Kajian Terkini</p></a>
           </li>
-		  <li>
-			<a href="list-kajian.php">
+      <li class="active">
+      <a href="">
               <i class="nc-icon nc-istanbul"></i>
               <p>Kajian</p></a>
-			  
-          </li>	
+        
+          </li> 
         </ul>
       </div>
     </div>
@@ -104,7 +72,7 @@ if( mysqli_num_rows($query) < 1 ){
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand">Dashboard / Berita / Edit</a>
+            <a class="navbar-brand">Dashboard / Berita / Tambah</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -149,69 +117,70 @@ if( mysqli_num_rows($query) < 1 ){
       <div class="content">
         <div class="row">
           <div class="col-md-12">
-		  
-		    <div class="col-md-12">
-				<div class="card card-plain">
-				  <div class="card-header">
-					<center>
-					<h3 class="card-title"> Berita Terkini dari Masjid Agung Al-Barkah Bekasi</h3>
-					</center>
-					<br></br>
-				  </div>
-				</div>
-			</div>
-		  
-            <div class="card">
-              <div class="card-header">
-                <center>
-				<h4 class="card-title"> Form Edit Berita</h4>
-				</center>
-              </div>
-				<div class="card-body">
-					<form action="proses-edit.php" method="POST" enctype="multipart/form-data">
-						<fieldset>
-						<input type="hidden" name="id" value="<?php echo $data['id'] ?>" />
-						<div class="row">
-							<div class="col-md-12">
-								<label for="gambar">Cover Berita: </label>
-								<div>
-								<input type="file" name="gambar"/>
-								</div>
-							</div>
-						</div>
-						<br>					
-						 <div class="row">
-							<div class="col-md-12">
-							  <div class="form-group">
-								<label for="judul">Judul: </label>
-								<input type="text" name="judul" placeholder="Judul Berita" class="form-control" value="<?php echo $data['judul'] ?>"/>
-							  </div>
-							</div>
-						</div>
-						<br>
-						<div class="row">
-							<div class="col-md-12">
-							  <div class="form-group">
-								<label for="isi">Berita: </label>
-								<textarea name="isi" class="ckeditor" id="ckedtor" placeholder="Isi Berita" class="form-control"><?php echo $data['isi'] ?></textarea>
-							  </div>
-							</div>
-						 </div>
-						<div class="row">
-							<div class="update ml-auto mr-auto">
-							  <button type="submit" class="btn btn-primary btn-round">Tambah Berita</button>
-							</div>
-						</div>
-						</fieldset>
-					</form>
-				
-			  </div>
-            </div>
-			
+      
+        <div class="col-md-12">
+        <div class="card card-plain">
+          <div class="card-header">
+          <center>
+          <h3 class="card-title"> Tambahkan Kajian Terkini dari Masjid Agung Al-Barkah Bekasi</h3>
+          </center>
+          <br></br>
           </div>
         </div>
       </div>
-	  
+      
+            <div class="card">
+              <div class="card-header">
+                <center>
+        <h4 class="card-title"> Form Tambah Kajian</h4>
+        </center>
+              </div>
+        <div class="card-body">
+
+          <form action="proses-tambah-kajian.php" method="POST" enctype="multipart/form-data">
+          <fieldset>
+          
+          <div class="row">
+            <div class="col-md-12">
+              <label for="gambar">Foto Ustadz: </label>
+              <div>
+              <input type="file" name="gambar"/>
+              </div>
+            </div>
+          </div>
+          <br>          
+           <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+              <label for="tema_kajian">Tema Kajian: </label>
+              <input type="text" name="tema_kajian" placeholder="Tema Kajian" class="form-control"/>
+              </div>
+            </div>
+          </div>
+          <br>
+           <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+              <label for="ustadz">nama Ustadz : </label>
+              <input type="text" name="ustadz" placeholder="Ustadz" class="form-control"/>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="update ml-auto mr-auto">
+              <button type="submit" class="btn btn-primary btn-round">Tambah Kajian</button>
+            </div>
+          </div>
+          </fieldset>
+          </form>
+        
+        </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+    
       <footer class="footer footer-black  footer-white ">
         <div class="container-fluid">
           <div class="row">
@@ -223,9 +192,9 @@ if( mysqli_num_rows($query) < 1 ){
                 <li>
                   <a href="https://www.instagram.com/amalazza/" target="_blank">Nurul Amala Azza</a>
                 </li>
-				<li>
-				<a>| Powered By Creative Tim |</a>
-				</li>
+        <li>
+        <a>| Powered By Creative Tim |</a>
+        </li>
               </ul>
             </nav>
             <div class="credits ml-auto">

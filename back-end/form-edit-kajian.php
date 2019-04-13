@@ -4,14 +4,14 @@ include("config.php");
 
 if( !isset($_GET['id']) ){
 	// kalau tidak ada id di query string
-	header('Location: list-siswa.php');
+	header('Location: list-kajian.php');
 }
 
 //ambil id dari query string
 $id = $_GET['id'];
 
 // buat query untuk ambil data dari database
-$sql = "SELECT * FROM berita WHERE id=$id";
+$sql = "SELECT * FROM kajian WHERE id=$id";
 $query = mysqli_query($db, $sql);
 $data = mysqli_fetch_assoc($query);
 
@@ -78,13 +78,13 @@ if( mysqli_num_rows($query) < 1 ){
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-		  <li class="active">
+		  <li>
 			<a href="list-berita.php">
               <i class="nc-icon nc-bank"></i>
               <p>Berita Terkini</p></a>
           </li>
-		  <li>
-			<a href="list-kajian.php">
+		  <li  class="active">
+			<a href="">
               <i class="nc-icon nc-istanbul"></i>
               <p>Kajian</p></a>
 			  
@@ -104,7 +104,7 @@ if( mysqli_num_rows($query) < 1 ){
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand">Dashboard / Berita / Edit</a>
+            <a class="navbar-brand">Dashboard / Kajian / Edit</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -154,7 +154,7 @@ if( mysqli_num_rows($query) < 1 ){
 				<div class="card card-plain">
 				  <div class="card-header">
 					<center>
-					<h3 class="card-title"> Berita Terkini dari Masjid Agung Al-Barkah Bekasi</h3>
+					<h3 class="card-title"> Kajian Terkini dari Masjid Agung Al-Barkah Bekasi</h3>
 					</center>
 					<br></br>
 				  </div>
@@ -164,16 +164,16 @@ if( mysqli_num_rows($query) < 1 ){
             <div class="card">
               <div class="card-header">
                 <center>
-				<h4 class="card-title"> Form Edit Berita</h4>
+				<h4 class="card-title"> Form Edit Kajian</h4>
 				</center>
               </div>
 				<div class="card-body">
-					<form action="proses-edit.php" method="POST" enctype="multipart/form-data">
+					<form action="proses-edit-kajian.php" method="POST" enctype="multipart/form-data">
 						<fieldset>
 						<input type="hidden" name="id" value="<?php echo $data['id'] ?>" />
 						<div class="row">
 							<div class="col-md-12">
-								<label for="gambar">Cover Berita: </label>
+								<label for="gambar">Foto Ustadz: </label>
 								<div>
 								<input type="file" name="gambar"/>
 								</div>
@@ -183,23 +183,24 @@ if( mysqli_num_rows($query) < 1 ){
 						 <div class="row">
 							<div class="col-md-12">
 							  <div class="form-group">
-								<label for="judul">Judul: </label>
-								<input type="text" name="judul" placeholder="Judul Berita" class="form-control" value="<?php echo $data['judul'] ?>"/>
+								<label for="tema_kajian">Tema Kajian: </label>
+								<input type="text" name="tema_kajian" placeholder="Tema Kajian" class="form-control" value="<?php echo $data['tema_kajian'] ?>"/>
 							  </div>
 							</div>
 						</div>
 						<br>
-						<div class="row">
-							<div class="col-md-12">
-							  <div class="form-group">
-								<label for="isi">Berita: </label>
-								<textarea name="isi" class="ckeditor" id="ckedtor" placeholder="Isi Berita" class="form-control"><?php echo $data['isi'] ?></textarea>
-							  </div>
-							</div>
-						 </div>
+					 <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                <label for="ustadz">Ustadz : </label>
+                <input type="text" name="ustadz" placeholder="Ustadz" class="form-control" value="<?php echo $data['ustadz'] ?>"/>
+                </div>
+              </div>
+            </div>
+            <br>
 						<div class="row">
 							<div class="update ml-auto mr-auto">
-							  <button type="submit" class="btn btn-primary btn-round">Tambah Berita</button>
+							  <button type="submit" class="btn btn-primary btn-round">Tambah Kajian</button>
 							</div>
 						</div>
 						</fieldset>

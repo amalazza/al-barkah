@@ -1,26 +1,4 @@
-<?php 
-
-include("config.php");
-
-if( !isset($_GET['id']) ){
-	// kalau tidak ada id di query string
-	header('Location: list-siswa.php');
-}
-
-//ambil id dari query string
-$id = $_GET['id'];
-
-// buat query untuk ambil data dari database
-$sql = "SELECT * FROM berita WHERE id=$id";
-$query = mysqli_query($db, $sql);
-$data = mysqli_fetch_assoc($query);
-
-// jika data yang di-edit tidak ditemukan
-if( mysqli_num_rows($query) < 1 ){
-	die("data tidak ditemukan...");
-}
-
-?>
+<?php include("config.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,6 +21,16 @@ if( mysqli_num_rows($query) < 1 ){
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
   
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.data').DataTable();
+	});
+</script>
+  
     <style type="text/css">
 		#css-serial {
 					counter-reset: serial-number;  /* Atur penomoran ke 0 */
@@ -52,8 +40,6 @@ if( mysqli_num_rows($query) < 1 ){
 					content: counter(serial-number);  /* Tampilan counter */
 					}
   </style>
-  
-   <script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
   
 </head>
 
@@ -78,16 +64,19 @@ if( mysqli_num_rows($query) < 1 ){
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-		  <li class="active">
+		  <li>
 			<a href="list-berita.php">
               <i class="nc-icon nc-bank"></i>
               <p>Berita Terkini</p></a>
-          </li>
-		  <li>
-			<a href="list-kajian.php">
+          </li>	
+		  <li class="active">
+			<a href="">
               <i class="nc-icon nc-istanbul"></i>
               <p>Kajian</p></a>
-			  
+ 		  <li>
+			<a ui-sref="login">
+              <i class="nc-icon nc-istanbul"></i>
+              <p>Logout</p></a>
           </li>	
         </ul>
       </div>
@@ -104,7 +93,7 @@ if( mysqli_num_rows($query) < 1 ){
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand">Dashboard / Berita / Edit</a>
+            <a class="navbar-brand">Dashboard / Kajian</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -154,57 +143,83 @@ if( mysqli_num_rows($query) < 1 ){
 				<div class="card card-plain">
 				  <div class="card-header">
 					<center>
-					<h3 class="card-title"> Berita Terkini dari Masjid Agung Al-Barkah Bekasi</h3>
+					<h3 class="card-title"> Kajian Terkini dari Masjid Agung Al-Barkah Bekasi</h3>
 					</center>
 					<br></br>
 				  </div>
+				  
+			<div class="card">
+			<center>
+              <div class="card-header">
+                <h4 class="card-title"> Tambahkan Kajian</h4>
+              </div>
+				<div class="card-body">
+				  	<nav>
+						<a href="form-daftar-kajian.php">
+						<i class="nc-icon nc-simple-add"></i>
+						Tambah Baru
+						</a>
+					</nav>
+				</div>
+				</center>
+			</div>
+				 
+				  
+				  
 				</div>
 			</div>
 		  
             <div class="card">
               <div class="card-header">
                 <center>
-				<h4 class="card-title"> Form Edit Berita</h4>
+				<h4 class="card-title"> Tabel Kajian</h4>
 				</center>
               </div>
 				<div class="card-body">
-					<form action="proses-edit.php" method="POST" enctype="multipart/form-data">
-						<fieldset>
-						<input type="hidden" name="id" value="<?php echo $data['id'] ?>" />
-						<div class="row">
-							<div class="col-md-12">
-								<label for="gambar">Cover Berita: </label>
-								<div>
-								<input type="file" name="gambar"/>
-								</div>
-							</div>
-						</div>
-						<br>					
-						 <div class="row">
-							<div class="col-md-12">
-							  <div class="form-group">
-								<label for="judul">Judul: </label>
-								<input type="text" name="judul" placeholder="Judul Berita" class="form-control" value="<?php echo $data['judul'] ?>"/>
-							  </div>
-							</div>
-						</div>
-						<br>
-						<div class="row">
-							<div class="col-md-12">
-							  <div class="form-group">
-								<label for="isi">Berita: </label>
-								<textarea name="isi" class="ckeditor" id="ckedtor" placeholder="Isi Berita" class="form-control"><?php echo $data['isi'] ?></textarea>
-							  </div>
-							</div>
-						 </div>
-						<div class="row">
-							<div class="update ml-auto mr-auto">
-							  <button type="submit" class="btn btn-primary btn-round">Tambah Berita</button>
-							</div>
-						</div>
-						</fieldset>
-					</form>
-				
+				  <div class="table-responsive">
+					<table border="1" class="table" id="css-serial">
+					<thead>
+						<tr>
+							<th>Nomor</th>
+							<th>Tema Kajian</th>
+							<th>Waktu</th>
+							<th>Ustadz</th>
+							
+							<th>Gambar</th>
+							<th>Tindakan</th>
+						</tr>
+					</thead>
+					<tbody>
+						
+						<?php
+						$sql = "SELECT * FROM kajian ORDER BY id DESC";
+						$query = mysqli_query($db, $sql);
+						
+						while($siswa = mysqli_fetch_array($query)){
+							echo "<tr>";
+							echo "<td>";
+							echo "<td>".$siswa['tema_kajian']."</td>";
+							echo "<td>".$siswa['waktu']."</td>";
+							echo "<td>".substr($siswa['ustadz'],0,80)."...."."</td>";
+							//echo "<td>"substr($siswa,0, 66)."</td>";
+							//echo "<td>".$siswa['agama']."</td>";
+							//echo "<td>".$siswa['sekolah_asal']."</td>";
+							
+							echo "<td><img src='images/".$siswa['gambar']."' width='100' height='100'></td>";
+							
+							echo "<td>";
+							echo "<a href='form-edit-kajian.php?id=".$siswa['id']."'>Edit</a> | ";
+							echo "<a href='hapus-kajian.php?id=".$siswa['id']."'>Hapus</a>";
+							echo "</td>";
+							
+							echo "</tr>";
+						}		
+						?>
+						
+					</tbody>
+					</table>
+					<p>Total: <?php echo mysqli_num_rows($query) ?></p>
+				</div>
 			  </div>
             </div>
 			
