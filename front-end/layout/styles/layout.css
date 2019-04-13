@@ -31,12 +31,20 @@ File: Layout CSS
 /* Page Intro
 --------------------------------------------------------------------------------------------------------------- */
 #pageintro{padding:180px 0; text-align:center;}
+#pageintropelayanan{padding:100px 0; text-align:center;}
 
 #pageintro > div{display:block; max-width:60%; margin:0 auto;}
 #pageintro > div *{line-height:normal;}
 #pageintro .heading{margin:0 0 30px 0; padding:0; font-size:4rem; font-weight:700;}
 #pageintro p{margin:0; font-size:1.2rem; line-height:2rem;}
 #pageintro footer{margin-top:30px;}
+
+#pageintropelayanan > div{display:block; max-width:60%; margin:0 auto;}
+#pageintropelayanan > div *{line-height:normal;}
+#pageintropelayanan .heading{margin:0 0 30px 0; padding:0; font-size:4rem; font-weight:700;}
+#pageintropelayanan p{margin:0; font-size:1.2rem; line-height:2rem;}
+#pageintropelayanan footer{margin-top:30px;}
+
 
 
 /* Content Area

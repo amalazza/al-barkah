@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<!--
+Template Name: Basend
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html lang="">
+<head>
+<title>Basend</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genre Reader</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Registration-Form.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Search-Form.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <script type="text/javascript">
+    function showHideGenre(a) {
+    var x = document.getElementById('Genre_' +a);
+    document.querySelectorAll('.hidden').forEach(function(el){
+    el.style.display = "none";
+    });
+    if (x.style.display === "inline") {
+    x.style.display = "none";
+    } else {
+    x.style.display = "inline";
+    }
+    }
+    </script>
+    <style type="text/css">
+    .hidden{
+     display: none;
+    }
+      .row2{color:#4A4A4A; background-color:#F6F6F6; padding-top: 200px;}
+        .figures{}
+        .figures > td{}
+        .figures > td:last-child{margin-bottom:0;}/* Used when elements stack in small viewports */
+        .figures > td > figure{display:inline-block; position:relative; width: 300px;}
+        .figures > td > figure figcaption{}
+        .figures > td > figure figcaption a{display:block; position:absolute; bottom:0; left:0; width:100%; height:39px; line-height:39px; padding:0 15px; border-top:1px solid; text-transform:uppercase; background-color: transparent;}
+        .figures > td > figure figcaption a::after{position:absolute; top:0; right:0; height:100%; padding:0 15px; font-family:"FontAwesome"; content:"\f105"; border-left:1px solid;}
+        .figures > td > figure figcaption time{display:block; position:absolute; top:-8px; left:-8px; width:60px; height:auto; padding:8px 0; text-align:center;}
+        .figures > td > figure figcaption time *{display:block; margin:0; padding:0;}
+        .figures > td > figure figcaption time strong{margin-bottom:-5px;}
+        /* Content Area */
+        .figures > td > figure figcaption a, .figures > td > figure figcaption a::after{border-color:rgba(255,255,255,.3);}
+        .figures > td > figure figcaption a{color:#FFFFFF; background:rgba(0,0,0,.55);}
+        .figures > td > figure:hover figcaption a{background:#629BAF;}
+        .figures > td > figure figcaption time{color:#FFFFFF; background-color:rgba(98,155,175,.5);/* #629BAF */}
+          </style>
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('images/demo/backgrounds/02.jpg');"> 
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+        <h1><a href="index.html">Al-Barkah Bekasi</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li class="drop"><a href="index.html">Beranda</a></li>
+          <li><a class="drop" href="#">Al-Barkah</a>
+            <ul>
+              <li><a href="pages/gallery.html">Tentang</a></li>
+              <li><a href="pages/full-width.html">Management</a></li>
+              <li><a href="pages/sidebar-left.html">Galeri</a></li>
+            </ul>
+          </li>
+          <li><a class="drop" href="#">Kegiatan</a>
+            <ul>
+				<li><a href="#">Kajian</a></li>
+				<li><a href="#">Berita Terkini</a></li>
+				<li><a href="#">Galeri Kegiatan</a></li>
+            </ul>
+          </li>
+		  <li class="active"><a href="pelayanan.html">Pelayanan</a></li>
+            <ul>
+				<li><a href="#">Bimbingan Mualaf</a></li>
+				<li><a href="#">Konsultasi Pernikahan dan Keluarga</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <section id="pageintropelayanan" class="hoc clear">
+  <h2 class="heading">Pelayanan</h2>
+    <div> 
+      <!-- ################################################################################################ -->
+
+ 
+      <!-- ################################################################################################ -->
+    </div>
+  </section>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<div class="wrapper row3">
+  <section class="hoc container clear"> 
+   
+<div class="wrapper row3">
+<center><table>
+  <tr class="nospace group figures">
+    <td class="one_third first" width="300px">
+      <figure><img src="assets/img/genre-advanture.jpg" alt="" style="width: 300px; height: 300px;">
+      <figcaption><a href="javascript:showHideGenre('1');">Bimbingan Mualaf</a></figcaption>
+      </figure>
+    </td>
+    <td class="one_third first">
+      <figure><img src="assets/img/genre-humor.jpg" alt="" style="width: 300px; height: 300px;">
+      <figcaption><a href="javascript:showHideGenre('2');">Konsultasi Pernikahan & Keluarga</a></figcaption>
+      </figure>
+    </td>
+  </tr>
+</table>
+</center>
+</div>
+<hr>
+  <table>
+    <tr id="Genre_1" class="hidden">
+    <td>
+      <aside class="box">
+          <div class="widget">
+
+            <h3> Bimbingan dan Pembinaan Mualaf</h3>
+<p>Masjid Istiqlal sebagai masjid negara memberikan pelayanan kepada masyarakat yang ingin memeluk agama Islam dengan membimbing proses menjadi seorang muslim hingga memahami hak dan kewajiban yang diembannya setelah menjadi seorang muslim.
+
+Untuk itu bagi masyarakat yang ingin memeluk agama Islam dan mengucapkan dua kalimat syahadat di Masjid Istiqlal harus mempersiapkan diri dan memenuhi beberapa prosedur yang sudah ditetapkan pengurus Masjid Istiqlal. berikut ini adalah beberapa prosedur yang harus diperhatikan</p>
+<br>
+<br>
+<h5>Prosedur Masuk Islam di Masjid Istiqlal Jakarta</h5>
+
+<h6>I. PENDAHULUAN</h6>
+<br>
+<br>
+
+<h7>Latar Belakang</h7>
+
+<p>Sejalan dengan Visi dan Misi BPPMI dalam meningkatkan kualitas pelayanan Masjid Istiqlal kepada masyarakat, khususnya dalam melayani masyarakat yang masuk Islam memerlukan prosedur tetap yang jelas dan baku.
+Pelaksanaan pelayanan peng-Islaman yang baik, senantiasa dilaksanakan secara terencana, sejak pendaftaran, pembinaan calon muallaf, pelaksanaan peng-Islaman dan pembinaan muallaf selanjutnya.
+Manajemen penyelenggaraan Peng-Islaman di Masjid Istiqlal, sejak pendaftaran, pembinaan dan pelaksanaan peng-Islaman perlu ditata secara tertib dan teratur.
+</p>
+<h7>Dasar Hukum</h7>
+
+<p>Keputusan Menteri Agama RI Nomor 573 Tahun 2005 tentang Susunan Personalia Badan Pelaksana Pengelola Masjid Istiqlal (BPPMI) Periode 2005-2010.
+Keputusan Ketua BPPMI Nomor 1B/SK/BPPMI/I/2006 tentang Pembagian Tugas Pokok dan Mekanisme Kerja BPPMI.
+</p>
+<h7>Maksud dan Tujuan</h7>
+
+<p>Prosedur tetap peng-Islaman di Masjid Istiqlal dimaksudkan untuk menjadi acuan baku bagi para petugas pelaksana peng-Islaman agar terwujud keseragaman dalam setiap melaksanakan peng-Islaman, sehingga peng-Islaman di Masjid Istiqlal betul-betul sesuai sebagaimana yang diharapkan.</p>
+
+<h7>Pengertian Istilah</h7>
+
+<p>Prosedur tetap adalah rangkaian tahapan yang baku dalam pelaksanaan kegiatan peng-Islaman di Masjid Istiqlal.
+Muallaf adalah orang yang menyatakan diri dan berikrar masuk agama Islam di Masjid Istiqlal.
+Pembinaan adalah rangkaian kegiatan dalam upaya memberi pengertian dan pemahaman tentang ajaran agama Islam terhadap seseorang baik dalam bentuk lisan, tulisan atau sarana lainnya, agar mantap memeluk dan mengamalkan syariat agama Islam</p>
+
+<h6>II. PROSEDUR PELAYANAN ADMINISTRASI</h6>
+
+<h7>Pelayanan Pendaftaran</h7>
+
+<p>	Orang yang akan menyatakan dirinya/berikrar masuk Islam di Masjid Istiqlal, mendaftarkan diri pada bidang Ta’mir, dan melengkapi persyaratan sebagai berikut :
+
+Membuat pernyataan akan memeluk agam Islam kepada petugas penerima pendaftaran, untuk dicatat biodata calon muallaf :
+<br>
+1.Nama lengkap dan orang tua<br>
+2.Jenis kelamin<br>
+3.Tempat/tanggal lahir<br>
+4.Kewarganegaraan<br>
+5.Alamat/tempat tinggal<br>
+6.Pekerjaan<br>
+7.Agama yang dianut sebelum ikrar masuk Islam<br>
+8.Mengisi formulir pendaftaran masuk/memeluk agama Islam<br>
+di Masjid Istiqlal<br>
+<br>
+Menyerahkan kepada petugas penerima pendaftaran :<br>
+<br>
+1.Pas photo 3lembar, ukuran 3×4<br>
+2.Surat Pengantar dari RT bagi (WNI) dan Surat Pengantar dari Kedutaan bagi (WNA)<br>
+3.Copy KTP bagi (WNI) dan Copy Paspor bagi WNA<br>
+4.Meterai temple Rp.6.000,- = 2 lembar<br>
+<br>
+Membuat Surat Permohonan Memeluk Agama Islam yang ditanda tangani di atas meterai Rp.6.000,- oleh yang bersangkutan dan ditanda tangani dua orang saksi, demikian juga WNA dibuat dalam bahasa Inggris. (dengan mengisi formulir yang telah disediakan).
+</p>
+<br>
+<h7>Pembinaan Muallaf</h7>
+
+<p>Pembinaan sebelum ikrar masuk Islam :<br>
+<br>
+Pada saat pendaftaran ditanya motivasi memeluk agama Islam.<br>
+Ditanya seberapa jauh mengenal, dan memahami agama Islam.<br>
+Diberi penjelasan singkat tentang Rukun Iman, Rukun Islam dan Ihsan.<br>
+Diberikan buku panduan untuk dipelajari<br>
+Diberikan pendidikan/pembinaan untuk memantapkan diri dalam agama Islam, selama satu minggu (7 hari), untuk mempelajari tentang : thaharah (bersuci), wudhu, shalat dan membaca Al-Qur’an<br>
+<br>
+Pembinaan pada saat ikrar masuk Islam :<br>
+
+Pembinaan pada saat ikrar masuk Islam, adalah yang dilakukan oleh petugas Pembina sebelum yang bersangkutan mengucapkan dua kalimat syahadat.
+<br>
+Pembinaan yang diberikan kepada yang bersangkutan, berupa nasehat-nasehat agar yang bersangkutan mantap dan kekal memeluk agama Islam. Menjelaskan arti dan kandungan dua kalimat syahadat, dengan membacakan dan menterjemahkan dua kalimat syahadat.
+<br>
+Yang bersangkutan diajari terlebih dahulu mengucapkan dua kalimat syahadat yang diucapkan dengan khusyu.
+<br>
+Pada saat ikrar masuk Islam, yang bersangkutan mengucapkan dua kalimat syahadat, Pembina menyimak dan memperhatikan ucapan dan kekhusyuan serta kesungguhan pengucapan ikrar tersebut.
+<br>
+Selesai yang bersangkutan mengucapkan/berikrar masuk Islam, dilanjutkan dengan pembacaan doa.
+<br>
+Pembinaan sesudah ikrar masuk Islam :<br>
+<br>
+Sedapat mungkin semua muallaf yang telah berikrar memeluk agama Islam di Masjid Istiqlal, tercatat bio data dan alamat yang bersangkutan, untuk memudahÂ­kan komunikasi dan jalinan silaturrahim, antara lain :<br>
+<br>
+– Diketahui ke Islaman yang bersangkutan lebih lanjut.<br>
+– Dilibatkan dalam kegiatan di Masjid Istiqlal<br>
+– Pengarahan untuk meningkatkan pemahaman dan pengamalan ke Islamannya.<br>
+</p>
+<h7>Petugas Peng-Islaman</h7>
+
+<p>Petugas Peng-Islaman ditetapkan berdasarkan Keputusan Ketua BPPMI berdasarkan usulan dan pertimbangan Ketua Bidang Ta’mir atas hasil penilaian terhadap masing-masing petugas yang bersangkutan.
+
+Penunjukan diprioritaskan terhadap pejabat dan pelaksana pada Bidang Ta’mir, juga petugas dan luar Bidang Ta’mir atas pertimbangan khusus.</p>
+
+<h7>Jadwal Peng-Islaman</h7>
+
+<p>Peng-Islaman pada dasarnya dilaksanakan pada setiap hari kerja, namun pada hari libur dimungkinkan bisa dilakukan melalui kesepakatan antara petugas dengan orang yang akan masuk Islam.
+
+Pada hari Senin s.d Jum’at peng-Islaman dilakukan mulai pukul 08.00 s.d 14.30 WIB dengan istirahat pada waktu shalat Zhuhur dan shalat Jum’at.
+
+Pada hari Sabtu dan hari libur ditetapkan waktunya berdasarkan waktu yang telah disepakati kedua belah fihak.</p>
+<br>
+<h7>Pelaksanaan Peng-Islaman</h7>
+
+<p></p>Suasana Ruangan Peng-Islaman, senantiasa diciptakan :
+<br>
+Suasana khusyu, serius, dan tenang (tidak ribut)<br>
+Ruangan berih, tertata rapi, baik dan teratur<br>
+Ruangan berwibawa menunjang suasana yang sakral.<br>
+</p>
+<h7>Penampilan petugas</h7>
+
+<p>Fisik yang sehat dan segar, tidak loyo/lusuh
+Menyampaikan nasihat dan memandu membaca dua kalimat syahadat, dengan suara dan bicara fasih.
+Pakaian bersih, baik, sopan, dan Islami.</p>
+
+<h7>Hadirin dalam Peng-Islaman</h7>
+
+<p>1) Petugas sekurang-kurangnya 2 orang/sebanyak-banyaknya 3 orang terdiri dari :<br>
+Penasehat<br>
+Pelaksana/pemandu mengucapkan dua kalimat syahadat<br>
+Pembacaan doa<br>
+<br>
+2) Orang yang akan menyatakan masuk Islam sendiri.<br>
+
+3) Saksi atau keluarga sekurang-kurangnya 2 orang dan sebanyak-banyaknya 8 orang.
+
+Pelaksanaan acara Peng-Islaman memenuhi prosedur teknis peng-Islaman yang baku.
+</p>
+<h6>PROSEDUR TEKNIS PENG-ISLAMAN</h6>
+<h7>Khutbah dan Nasehat Peng-Islaman</h7>
+
+<p>Khutbah atau nasehat peng-Islaman dilakukan oleh pembimbing/ penasehat peng-Islaman
+
+Dalam khutbah/nasehat kepada calon mualaf materi nasehat yang perlu disampaikan secara kronologis sebagai berikut :<br>
+<br>
+1.Pembukuan dengan pertanyaan-pertanyaan menguji kemantapan calon mualaf masuk Islam<br>
+-Aqidah<br>
+– Ibadah<br>
+-Muamalah<br>
+– Kewajiban menuntut ilmu.<br>
+<br>
+2.Akad / Ikrar masuk Islam<br>
+
+Pengucapan dua kalimat syahadat dipandu oleh pembimbing/ pemandu, dilafalkan dalam bahasa Arab, kemudian dibacakan artinya.
+
+Dilaksanakan dalam suasana yang khidmat, khusyu’, serius sehingga pengucapan dua kalimat syahadat tersebut oleh yang bersangkutan diucapkan dengan lisan, dibarengi dengan hatinya.
+<br><br>
+3.Pembacaan Do’a<br>
+
+Pembacaan doa dipimpinan oleh pembimbing pembaca doa, bila petugas khusus doa berhalangan hadir, bisa dilakukan oleh Pemandu peng-Islaman, atau Penasehat
+
+Pembacaan doa dilaksanakan segera setelah selesainya pengucapan dua kalimat syahadat.
+<br><br>
+4.Sertifikat masuk Islam<br>
+
+Sertifikat dibuat dalam bentuk baku yang dicetak denganmutu cetakan dan kertas yang terbaik.
+Sertifikat ditanda tangani oleh yang bersangkutan dan para saksi pada saat setelah pengucapan dua kalimat syahadat, setelah selesai pembacaan do’a
+Sertifikat dibuat dua rangkap (asli dan duplikat) aslinya diberikan kepada yang bersangkutan sedangkan duplikatnya didokumentasikan oleh Bidang Ta’mir
+Sertifikat khusus untuk orang WNA dibuatkan dalam teks bahasa Inggris.
+
+<h6>PERSYARATAN TEHNIS ADMINISTRATIF PENGISLAMAN</h6>
+
+1. Pas photo, ukuran 3 x 4 = 3 lembar<br>
+2. Surat Pengantar dari RT bagi WNI<br>
+3. Fotocopy Kartu Tanda Penduduk (KTP)<br>
+4. Meterai Rp. 6.000,- = 2 lembar<br>
+5. Fotocopy Paspor bagi WNA<br>
+6. Saksi 2 (dua) orang<br>
+7. Waktu pukul 09.00 – 14.40 WIB, Senin s.d Sabtu<br>
+
+(Tanggal merah, Hari Libur) Telp. 021 386 8347<br>
+<br>
+*Tempat di Bidang Ta’mir Masjid Istiqlal Kamar 61<br>
+Tidak dipungut biaya.</p>
+      <br>
+      
+
+    <tr id="Genre_2" class="hidden">
+    <td>
+      <aside class="box">
+          <div class="widget">
+            
+			<h5>Konsultasi Keluarga dan Pernikahan</h5>
+			<br>
+			<p>
+Masjid Istiqlal bekerjasama dengan Badan Penasihatan, Pembinaan dan Pelestarian Perkawinan (BP4) yang berada di bawah Kementerian agama melayani konsultasi Pernikahan dan Keluarga bagi jamaah atau masyarakat.
+
+BP4 berdiri sejak 1950-an dan merupakan lembaga yang dilahirkan oleh Kementerian Agama dengan tujuan untuk mempertinggi nilai perkawinan dan terwujudnya rumah tangga sejahtera dan bahagia menurut tuntunan Islam. Sejarah keberadaan BP4 adalah atas prakarsa tokoh Islam almarhum H.S.M. Nasaruddin Latif. Diawali dengan pembentukan Seksi Penasihat Perkawinan pada Kantor-kantor Urusan Agama di wilayah Provinsi Jakarta Raya pada 1954. Pada tahun 1956 ditingkatkan menjadi P5 (Panitia Penasihat Perkawinan dan Penyelesaian Perceraian). Dalam perkembangan selanjutnya pada pertemuan organisasi penasihatan perkawinan se-Jawa di Jakartatahun 1960 disepakati pembentukan organisasi BP4 yang bersifat nasional hingga kemudian pada Konperensi Dinas Departemen Agama ke VII tahun 1961 di Cipayungdiumumkan berdirinya BP4 yang bersifat nasional.
+<br>
+<br>
+Alamat : Masjid Istiqlal R.66 Jalan Taman Wijaya Kusumah Jakarta 10710 Telp/ Fax 021-3804927
+
+Hotline : 021-3457444 Website : www.bp4pusat.or.id.
+
+Melayani konseling Perkawinan dan Keluarga.
+
+
+Ketentuan :
+
+1. Pendaftaran Konseling/ konsultasi sehari atau dua hari sebelumnya dengan konsultan yang bertugas.<br>
+
+2. Tempat Konsultasi di Kantor BP4 Pusat<br>
+
+3. Membayar biaya konsultasi.<br>
+<br>
+Waktu :<br>
+<br>
+1. Tiap hari kerja Senin s.d. Jum’at jam 09.00 s.d. 16.00<br>
+
+2. Dan khusus hari Sabtu sesuai jadwal buka bila ada perjanjian konsultasi.<br>
+
+Daftar Konsultan BP4 Pusat<br>
+
+Hari Senin<br>
+
+1. Drs. H. Kadi Sastrowirjono. (Konsultan, Mediator, Mantan Hakim dan Pakar Hukum Waris)<br>
+
+Telp 021-7971225/ Hp.0813.14262911<br>
+
+2. Dra. Hj. D. Cholidah Hanum, M.Pd.I. (Konsultan, Mediator dan Psikolog)<br>
+
+Hp.0812.9686.5400<br>
+
+
+Hari Selasa<br>
+
+4. Dra. Hj. Zubaidah Muchtar. (Konsultan, Mediator dan Psikolog)<br>
+
+Telp.021-4247.892/ Hp.0813.1053.3893<br>
+
+5. Dra.Hj. Siti Khadijah, M.Si. (Konsultan, Mediator dan Psikolog)<br>
+
+Hp.0856.9188.4446<br>
+
+
+Hari Rabu<br>
+<br>
+6. Prof.Dr.Hj. Nurhayati Djamas, M.A.,M.Si. (Konsultan, Mediator, Pakar Hukum dan Psikologi Anak dan Keluarga)<br>
+
+Hp.0813.1629.1153<br>
+
+
+Hari Kamis<br>
+<br>
+7. Dra. Hj. Durrah Baraja, S.H.,M.Hum. (Mediator, Konsultan dan Pakar Hukum)<br>
+
+Hp.0813.8212.4884/ 081.725.425<br>
+
+8. Dr. H. Soefyanto, S.H.,M.H. (Konsultan, Mediator dan Pakar Hukum)<br>
+
+Telp.021-781.0439/ Hp.0813.8002.5614<br>
+
+
+Hari Jum’at<br>
+<br>
+9. Dra. Hj. Fadilah Ahmad, M.M. (Mediator dan Konsultan)<br>
+
+Telp.021-8090008/ Hp.0812.824.5505<br>
+
+10. Dr. H. Nandi Naksabandi, S.H.,M.H. (Konsultan dan Pakar Hukum)<br>
+
+Hp.0815.1313.7788<br>
+
+
+Berdasarkan Perjanjian (Hari Sabtu) :
+<br>
+11. Prof.Dr. Hj. Reni Akbar Hawadi (Konsultan Pakar Psikolog Perkembangan)<br>
+
+Hp.0818.783.223<br>
+
+12. Drs. H. Wahyu Widiana, M.A. (Konsultan dan Pakar Hukum)<br>
+
+Hp.0813.8193.4687<br>
+
+13. Dra. Hj. Nilmayetty, M.M. (Konsultan dan Mediator)<br>
+
+Hp.0821.2213.1583/ 0816.1667.972<br>
+
+14. Dra. Hj. Zahrotun Nihayah, M.Si. (Konsultan Anak)
+<br>
+Hp.0812.9068.615<br>
+
+15. Dra. Radhiya Bustan, M.Soc. Sc. (Konsultan dan Mediator)<br>
+
+Hp.0812.9344.1982<br>
+    
+</p>
+</table>
+
+	
+	<script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- ################################################################################################ -->
+    <div class="clear"></div>
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4 bgded overlay" style="background-image:url('images/demo/backgrounds/02.png');">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="one_third first">
+      <h6 class="heading">Lokasi</h6>
+      <iframe src="https://www.google.com/maps/embed?pb=!4v1554957295150!6m8!1m7!1sf5AbmaMlbsWRHsRWgHI_vg!2m2!1d-6.241095337362261!2d107.0001906867666!3f295.62!4f0!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <div class="one_third">
+      <h6 class="heading">Aliquam non fermentum</h6>
+      <ul class="nospace btmspace-30 linklist contact">
+        <li><i class="fa fa-map-marker"></i>
+          <address>
+          Street Name &amp; Number, Town, Postcode/Zip
+          </address>
+        </li>
+        <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
+        <li><i class="fa fa-fax"></i> +00 (123) 456 7890</li>
+        <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+      </ul>
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+      </ul>
+    </div>
+    <div class="one_third">
+      <h6 class="heading">Sapien lobortis nec</h6>
+      <article><a href="#"><img class="btmspace-15" src="images/demo/320x140.png" alt=""></a>
+        <h6 class="nospace font-x1"><a href="#">Velit pellentesque</a></h6>
+        <time class="font-xs block btmspace-10" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2045</time>
+        <p class="nospace">Eget nisl mauris placerat mauris a semper posuere sem arcu cursus felis non cursus enim odio in maecenas ut justo [&hellip;]</p>
+      </article>
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
